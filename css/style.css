@@ -235,3 +235,19 @@ footer {
   padding: 0 10%;
   height: 80px;
 }
+
+.ls-container>h1 {
+  color: #000;
+  font-style: normal;
+  line-height: normal;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.ls-container>p {
+  color: #8c8c8c;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

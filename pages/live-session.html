@@ -13,6 +13,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="../js/ls.js" defer></script>
   </head>
   <body>
     <nav class="navbar">
@@ -27,19 +29,48 @@
       </div>
     </nav>
 
-    <section>
+    <section id="search-nav-container">
       <div class="container-sm mt-4">
         <form class="d-flex" role="search">
           <input
-            class="form-control me-2 empty"
+            class="form-control me-2 rounded-4 empty"
             type="search"
             placeholder="&#xF002;   Search"
             aria-label="Search"
+            id="search-nav"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button
+            id="search-nav-btn"
+            class="btn btn-outline-success"
+            type="submit"
+          >
+            Search
+          </button>
         </form>
       </div>
     </section>
+
+    <main class="ls-container container-sm p-5">
+      <h1 class="text-center">Live Session</h1>
+      <p class="text-center mb-4">
+        A session in which the performance are broadcast or recorded in real
+        time about farming
+      </p>
+
+      <div id="list-ls" class="row">
+        <!-- <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div> -->
+      </div>
+    </main>
 
     <!-- Iconify linked -->
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
