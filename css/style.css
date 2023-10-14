@@ -48,7 +48,7 @@ a[disabled="disabled"] {
   pointer-events: none;
 }
 
-.btn {
+.btn-nav {
   background: green;
   outline: none;
   border: none;
@@ -59,7 +59,7 @@ a[disabled="disabled"] {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn-nav:hover {
   background: darkgreen;
   outline: none;
   border: none;
