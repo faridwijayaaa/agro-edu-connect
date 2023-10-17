@@ -1,6 +1,5 @@
 let listLiveSession = document.getElementById("list-ls");
 let listSelectLS = document.getElementById("ls-slc-container");
-let listContentLS = document.getElementById("list-ls-container");
 
 async function getLiveSession() {
   try {
@@ -9,10 +8,7 @@ async function getLiveSession() {
     );
     let liveSession = await respons.json();
 
-    // console.log(liveSession);
-    listSelectLS.className = "d-0";
-
-    liveSession.map((item, index) => {
+    liveSession.map((item) => {
       let cardLiveSession = `
           <div class="card text-center mb-5 border-0 shadow-none pe-none" style="width: 24%; height: 47vh">
               <img src=${
@@ -28,7 +24,9 @@ async function getLiveSession() {
                       item.description.indexOf(".") + 1
                     )}
                 </p>
-                <a href="#" class="btn btn-secondary pe-auto position-absolute bottom-0 start-5 translate-middle-x fs-6 py-1 fw-medium">Detail</a>
+                <a href="./detail-live-session.html" onclick="handleToDetail(${
+                  item.id
+                })" class="btn btn-secondary pe-auto position-absolute bottom-0 start-5 translate-middle-x fs-6 py-1 fw-medium">Detail</a>
               </div>
           </div>
           `;
@@ -38,6 +36,10 @@ async function getLiveSession() {
   } catch (err) {
     console.log(err);
   }
+}
+
+function handleToDetail(itemId) {
+  localStorage.setItem("liveSessionId", JSON.stringify(itemId));
 }
 
 getLiveSession();
