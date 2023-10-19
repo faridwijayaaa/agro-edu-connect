@@ -83,3 +83,14 @@ a{
 p{
     text-align: center;
 }
+
+@media screen and (max-width:896px) {
+  .login > img{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+  form {
+    width: 100%;
+  }
+}
