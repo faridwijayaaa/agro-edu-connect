@@ -20,7 +20,7 @@ const renderDetailContent = async () => {
               <h5 class="card-title mb-3">${data.prof}</h5>
               <p class="card-text mb-0">${data.date}</p>
               <p class="card-text mb-5"><small class="text-body-secondary">${data.hour}</small></p>
-              <button type="button" class="btn btn-success pe-auto">Enroll Live Session</button>
+              <a href="./enroll-live-session.html" onclick="handleEnroll(${data.id})" class="btn btn-success pe-auto">Enroll Live Session</a>
               <a href="./live-session.html" class="btn btn-outline-danger pe-auto px-3 mt-3">Back</a>
             </div>
           </div>
@@ -34,5 +34,9 @@ const renderDetailContent = async () => {
     console.log(error);
   }
 };
+
+function handleEnroll(itemId) {
+  localStorage.setItem("enrollId", JSON.stringify(itemId))
+}
 
 renderDetailContent();
