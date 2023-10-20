@@ -7,6 +7,7 @@ const renderDetailContent = async () => {
     );
     const data = await response.json();
 
+    document.title = `${data.name} - AgroEduConnect`;
     document.getElementById("ls-slc-container").innerHTML += `
       <h1 class="text-center fs-2 mb-3">${data.name}</h1>
       <p class="text-center mb-5 fs-6">
@@ -20,6 +21,7 @@ const renderDetailContent = async () => {
               <p class="card-text mb-0">${data.date}</p>
               <p class="card-text mb-5"><small class="text-body-secondary">${data.hour}</small></p>
               <button type="button" class="btn btn-success pe-auto">Enroll Live Session</button>
+              <a href="./live-session.html" class="btn btn-outline-danger pe-auto px-3 mt-3">Back</a>
             </div>
           </div>
           <div class="col-md-4">
