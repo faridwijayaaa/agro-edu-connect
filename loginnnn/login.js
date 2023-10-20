@@ -43,7 +43,7 @@ const handleSubmit = async (e) => {
       name: isUserExist.name,
     })
   );
-  return alert("Login Successful");
+  return window.open("../pages/live-session.html");
 };
 
 document.getElementById("form").onsubmit = handleSubmit;
