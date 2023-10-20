@@ -43,7 +43,7 @@ const handleSubmit = async (e) => {
       name: isUserExist.name,
     })
   );
-  return window.open("../pages/live-session.html");
+  return window.open("../pages/live-session.html", (value = "_parent"));
 };
 
 document.getElementById("form").onsubmit = handleSubmit;
