@@ -31,7 +31,7 @@ const renderEnrollContent = async () => {
                     <div class="card border-0 w-100 text-center shadow-none position-absolute top-50 start-50 translate-middle">
                       <div class="card-body">
                         <a href="#" class="btn btn-secondary rounded-0 rounded-start-3" style="padding-right: 4vw; padding-left: 2vw;">Enrolled <iconify-icon icon="subway:tick" class="ms-3" style="font-size: 0.8rem"></iconify-icon></a>
-                        <a href="#" class="btn btn-success rounded-0 rounded-end-3 pe-auto" style="padding-right: 3.5vw; padding-left: 3.5vw; margin-left: -5px;">Join Live Session</a>
+                        <a href="./room-live-session.html" onclick="handleRoom(${data.id})" class="btn btn-success rounded-0 rounded-end-3 pe-auto" style="padding-right: 3.5vw; padding-left: 3.5vw; margin-left: -5px;">Join Live Session</a>
                       </div>
                     </div>
                   </div>
@@ -43,5 +43,9 @@ const renderEnrollContent = async () => {
     console.log(error);
   }
 };
+
+function handleRoom(itemId) {
+  localStorage.setItem("roomId", JSON.stringify(itemId));
+}
 
 renderEnrollContent();
